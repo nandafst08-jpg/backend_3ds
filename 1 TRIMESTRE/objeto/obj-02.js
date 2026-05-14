@@ -9,6 +9,6 @@ const filme = {
     nomeFilme: "enrolados",
     preco: 35.0
     duracao: 1h40m
-    Data de lancamento: 7 de janeiro de 2011
+    Datadelancamento: 7 de janeiro de 2011
 
 }
