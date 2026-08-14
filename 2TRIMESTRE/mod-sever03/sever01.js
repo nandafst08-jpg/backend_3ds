@@ -6,6 +6,7 @@ const porta = 8001
 
 const home = path.join(__dirname,'/pages/index.html')
 const compras = path.join(__dirname,'/pages/compras.html')
+const erros = path.join(__dirname,'/pages/erros.html')
 
 // criar servidor e rotas
 const server = http.createServer((req, res) => {
@@ -19,6 +20,10 @@ const server = http.createServer((req, res) => {
     if (caminhoPesquisado === '/compras') {
         res.setHeader('Content-Type', 'text/html; charset=utf8')
         return res.end(fs.readFileSync(compras, 'utf8'))
+    } 
+    if (caminhoPesquisado === '/erro') {
+        res.setHeader('Content-Type', 'text/html; charset=utf8')
+        return res.end(fs.readFileSync(erros, 'utf8'))
     } else {
         res.setHeader('Content-Type', 'text/html; charset=utf8')
         res.end('<h3>Página não permitida</h3>')
