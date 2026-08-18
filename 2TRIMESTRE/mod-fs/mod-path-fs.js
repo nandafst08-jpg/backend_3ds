@@ -13,4 +13,4 @@ try {
 } catch (erro) {
     console.erro(chalk.bgRed.white('Deu ruim...'))
     console.log(erro.message)
-}''
+} ''
