@@ -1,12 +1,15 @@
-import express from  'express'
+import express from 'express'
+import path from 'path'
 
+const dirBase = import.meta.dirname
 const app = express()
 const porta = 3000
-//Criar as rotas do servidor
+//Usar Middleware(Guardião)
+app.use(express.static(path.join(dirBase, 'publico')))
+
+// Criar as rotas do servidor
 app.get('/', (req, res) => {
-    res.send('/paginas/index.html,'{root: import.meta.dirname})
+    res.sendFile('/paginas/index.html',{ root: dirBase })
 })
-
-
-//Liberar a porta do meu computador 
-app.listen(porta, () => {console.log('Servidor está vivo!')} ) 
+// Liberar a porta do meu computador 
+app.listen(porta, () => { console.log('Servidor está vivo!') }) 
