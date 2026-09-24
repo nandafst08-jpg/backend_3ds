@@ -1,5 +1,337 @@
+/* ==========================================================================
+   1. Variáveis de Design (Tokens de Estilo Premium)
+   ========================================================================== */
+:root {
+    --color-bg-light: #FAF8F5;       /* Creme suave de fundo */
+    --color-primary: #2A1A12;        /* Chocolate Escuro Profundo (Excelente Contraste) */
+    --color-secondary: #4A3525;      /* Tom de transição terroso */
+    --color-accent: #C5A059;         /* Dourado Metálico Sofisticado */
+    --color-accent-hover: #AA843F;   /* Dourado Escurecido */
+    --color-text-dark: #2A1A12;
+    --color-text-muted: #5C524C;
+    --color-white: #FFFFFF;
+    
+    --font-titles: 'Playfair Display', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
 
-*{
-    background-color: rgba(122, 22, 216, 0.747);
-    color:rgb(12, 100, 172)
+/* ==========================================================================
+   2. Reset e Configurações Globais
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+/* ==========================================================================
+   3. Cabeçalho (Header)
+   ========================================================================== */
+.main-header {
+    background-color: rgba(250, 248, 245, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(74, 53, 37, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-titles);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--color-accent);
+    font-weight: 300;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: var(--color-accent);
+    transition: var(--transition-smooth);
+}
+
+.nav-link:hover {
+    color: var(--color-accent);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.btn-cta-nav {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.btn-cta-nav:hover {
+    background-color: var(--color-accent);
+}
+
+/* ==========================================================================
+   4. Seção Hero
+   ========================================================================== */
+.hero-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-tagline {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-accent);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.hero-content h1 {
+    font-family: var(--font-titles);
+    font-size: 3.5rem;
+    line-height: 1.15;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.hero-image-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(42, 26, 18, 0.08);
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.hero-image-wrapper:hover .hero-img {
+    transform: scale(1.03);
+}
+
+/* ==========================================================================
+   5. Seção de Diferenciais (Cards Componentizados)
+   ========================================================================== */
+.features-section {
+    background-color: var(--color-white);
+    padding: 6rem 2rem;
+    border-top: 1px solid rgba(74, 53, 37, 0.05);
+}
+
+.section-title {
+    font-family: var(--font-titles);
+    font-size: 2.25rem;
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 4rem;
+}
+
+.features-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 6px;
+    transition: var(--transition-smooth);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    font-family: var(--font-titles);
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   6. Rodapé (Footer)
+   ========================================================================== */
+.main-footer {
+    background-color: var(--color-primary);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    padding: 3rem 2rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav a {
+    margin-left: 2rem;
+}
+
+.footer-nav a:hover {
+    color: var(--color-accent);
+}
+
+/* ==========================================================================
+   7. Responsividade (Media Queries)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .hero-content p {
+        margin: 0 auto 2.5rem;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .nav-menu ul {
+        gap: 1.5rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .footer-nav a {
+        margin: 0 1rem;
+    }
 }

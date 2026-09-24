@@ -1,12 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio Doces</title>
+    <meta name="description" content="Confeitaria Premium - Experiências gastronômicas exclusivas em doces finos e alta chocolataria.">
+    <title>Grand Douce | Alta Confeitaria</title>
+    <link rel="stylesheet" href="../../estilos/index.css">
+    <!-- Fonte Serifada para Títulos de Luxo e Sans-serif para Leitura -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h3>Página Inicial</h3>
-    <p>Bem Vindo(a) a Home!</p>
+
+    <!-- Cabeçalho Principal -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="/" class="logo">Grand<span>Douce</span></a>
+            
+            <nav class="nav-menu" aria-label="Navegação Principal">
+                <ul>
+                    <li><a href="/sobre" class="nav-link">Sobre Nós</a></li>
+                    <li><a href="/produtos" class="nav-link">Produtos Finos</a></li>
+                    <li><a href="/servicos" class="nav-link">Eventos & Serviços</a></li>
+                </ul>
+            </nav>
+            
+            <a href="/produtos" class="btn-cta-nav">Fazer Pedido</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Hero (Apelo Sensorial e Copy Premium) -->
+        <section class="hero-section" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <span class="hero-tagline">Uma Experiência Exclusiva</span>
+                <h1 id="hero-title">A alta chocolataria moldada em pura arte</h1>
+                <p>Descubra uma sinfonia de sabores meticulosamente desenhada por mestres confeiteiros, utilizando os cacaus mais raros do mundo.</p>
+                <div class="hero-actions">
+                    <a href="/produtos" class="btn-primary">Conhecer Coleções</a>
+                    <a href="/servicos" class="btn-secondary">Menus Corporativos</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <!-- Imagem Otimizada em WebP conforme Requisitos Técnicos -->
+                <img src="images/hero-chocolates.webp" alt="Seleção de bombons finos artesanais decorados com folhas de ouro" class="hero-img" loading="eager">
+            </div>
+        </section>
+
+        <!-- Seção de Destaques (Componentizada) -->
+        <section class="features-section" aria-labelledby="features-title">
+            <h2 id="features-title" class="section-title">O Padrão Grand Douce</h2>
+            
+            <div class="features-grid">
+                <!-- Item 1 -->
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">⚜️</div>
+                    <h3>Cacau de Origem</h3>
+                    <p>Grãos selecionados rastreáveis provenientes de fazendas sustentáveis da Linha do Equador.</p>
+                </article>
+
+                <!-- Item 2 -->
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">✨</div>
+                    <h3>Design Autoral</h3>
+                    <p>Cada doce é lapidado à mão, unindo estética contemporânea a técnicas clássicas francesas.</p>
+                </article>
+
+                <!-- Item 3 -->
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🎁</div>
+                    <h3>Presentes Memoráveis</h3>
+                    <p>Embalagens rígidas personalizadas feitas para transformar o doce em um gesto de alta sofisticação.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Grand Douce Alta Confeitaria. Todos os direitos reservados.</p>
+            <nav class="footer-nav" aria-label="Links do Rodapé">
+                <a href="/sobre">A Confeitaria</a>
+                <a href="/produtos">Coleções</a>
+                <a href="/servicos">Atendimento Premium</a>
+            </nav>
+        </div>
+    </footer>
+
 </body>
 </html>
