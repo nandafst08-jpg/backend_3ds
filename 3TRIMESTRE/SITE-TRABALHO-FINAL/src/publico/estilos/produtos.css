@@ -1,0 +1,195 @@
+/* --- Configurações Gerais e Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-velvet: #8c142c;       /* Vinho/Roxo do print original */
+    --accent-olive: #A38043;   /* Verde oliva/bege do botão */
+    --text-dark: #2c1a24;
+    --text-light: #ffffff;
+    --bg-light: #fbf9f9;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* --- Cabeçalho Principal --- */
+.main-header {
+    background-color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.main-header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--bg-velvet);
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #666;
+    margin-left: 25px;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover, 
+.main-nav a.active {
+    color: var(--bg-velvet);
+    font-weight: 600;
+}
+
+/* --- Barra de Categorias Fixa (Sticky Menu) --- */
+.sticky-menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bg-velvet);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.categories-nav {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.categories-nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.categories-nav a:hover {
+    color: var(--accent-olive);
+}
+
+/* --- Container e Seções do Cardápio --- */
+.menu-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.menu-section {
+    margin-bottom: 60px;
+    scroll-margin-top: 70px; /* Evita que o topo da seção fique escondido atrás do menu fixo */
+}
+
+.menu-section h2 {
+    font-size: 28px;
+    color: var(--bg-velvet);
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--accent-olive);
+    padding-bottom: 8px;
+}
+
+/* --- Grid de Produtos (Layout Responsivo) --- */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* --- Card de Produto --- */
+.product-card {
+    background-color: var(--text-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-info h3 {
+    font-size: 19px;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.product-info .description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Garante que os preços fiquem alinhados se o texto variar */
+}
+
+.product-info .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--bg-velvet);
+    background-color: rgba(90, 34, 60, 0.05);
+    padding: 6px 12px;
+    border-radius: 6px;
+    align-self: flex-start;
+}
+
+/* --- Rodapé --- */
+.main-footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #f1ede2;
+    color: #666;
+    font-size: 14px;
+    margin-top: 80px;
+}
+
+/* --- Media Queries (Ajustes para Mobile adicionais) --- */
+@media (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .main-nav a {
+        margin: 0 10px;
+    }
+
+    .categories-nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr; /* Força 1 coluna em telas bem pequenas */
+    }
+}

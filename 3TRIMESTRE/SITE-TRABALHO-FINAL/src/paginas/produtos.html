@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Velvet Coffee</title>
+    <link rel="stylesheet" href="../../estilos/produtos.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header class="main-header">
+        <div class="logo">Velvet Coffee</div>
+        <nav class="main-nav">
+            <a href="/">Home</a>
+            <a href="/cardapio" class="active">Cardápio</a>
+            <a href="/sobre">Sobre Nós</a>
+            <a href="/contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Barra de Categorias Fixa (Sticky Menu) -->
+    <div class="sticky-menu">
+        <nav class="categories-nav">
+            <a href="#cafes">☕ Cafés</a>
+            <a href="#doces">🍰 Doces</a>
+            <a href="#lanches">🥪 Lanches</a>
+        </nav>
+    </div>
+
+    <!-- Conteúdo Principal do Cardápio -->
+    <main class="menu-container">
+        
+        <!-- SEÇÃO: CAFÉS -->
+        <section id="cafes" class="menu-section">
+            <h2>☕ Cafés</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://unsplash.com" alt="Espresso" loading="lazy">
+                    <div class="product-info">
+                        <h3>Espresso</h3>
+                        <p class="description">Espresso tirado na hora com grãos selecionados 100% arábica, notas de chocolate e finalização aveludada.</p>
+                        <span class="price">R$ 7,50</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://unsplash.com" alt="Cappuccino" loading="lazy">
+                    <div class="product-info">
+                        <h3>Cappuccino</h3>
+                        <p class="description">Equilíbrio perfeito de espresso, leite vaporizado e uma camada cremosa de espuma de leite povilhada com cacau.</p>
+                        <span class="price">R$ 11,00</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://unsplash.com" alt="Latte" loading="lazy">
+                    <div class="product-info">
+                        <h3>Latte</h3>
+                        <p class="description">Uma dose generosa de leite quente vaporizado misturada ao nosso espresso tradicional, suave e reconfortante.</p>
+                        <span class="price">R$ 10,50</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://unsplash.com" alt="Mocha" loading="lazy">
+                    <div class="product-info">
+                        <h3>Mocha</h3>
+                        <p class="description">Uma combinação irresistível de espresso, calda de chocolate artesanal, leite vaporizado e chantilly.</p>
+                        <span class="price">R$ 13,00</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://unsplash.com" alt="Iced Coffee" loading="lazy">
+                    <div class="product-info">
+                        <h3>Iced Coffee</h3>
+                        <p class="description">Nosso café especial extraído a frio, servido com gelo. Refrescante, leve e naturalmente adocicado.</p>
+                        <span class="price">R$ 12,00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: DOCES -->
+        <section id="doces" class="menu-section">
+            <h2>🍰 Doces</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://unsplash.com" alt="Brownie" loading="lazy">
+                    <div class="product-info">
+                        <h3>Brownie</h3>
+                        <p class="description">Brownie denso de chocolate nobre com crosta crocante por fora e textura super cremosa e úmida por dentro.</p>
+                        <span class="price">R$ 9,50</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://unsplash.com" alt="Cheesecake" loading="lazy">
+                    <div class="product-info">
+                        <h3>Cheesecake</h3>
+                        <p class="description">Fatia da clássica torta americana com base de biscoito amanteigado, creme de cream cheese e calda de frutas vermelhas.</p>
+                        <span class="price">R$ 15,00</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://unsplash.com" alt="Chocolate Cake" loading="lazy">
+                    <div class="product-info">
+                        <h3>Chocolate Cake</h3>
+                        <p class="description">Fatia de bolo artesanal de chocolate com camadas generosas de brigadeiro gourmet e cobertura aveludada.</p>
+                        <span class="price">R$ 14,00</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://unsplash.com" alt="Cookies" loading="lazy">
+                    <div class="product-info">
+                        <h3>Cookies</h3>
+                        <p class="description">Cookie tradicional americano, crocante nas bordas e macio no centro, recheado com muitas gotas de chocolate.</p>
+                        <span class="price">R$ 8,00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: LANCHES -->
+        <section id="lanches" class="menu-section">
+            <h2>🥪 Lanches</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://unsplash.com" alt="Croissant" loading="lazy">
+                    <div class="product-info">
+                        <h3>Croissant</h3>
+                        <p class="description">Folhado francês legítimo, feito com manteiga de alta qualidade, extremamente dourado, leve e crocante.</p>
+                        <span class="price">R$ 10,00</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://unsplash.com" alt="Toast" loading="lazy">
+                    <div class="product-info">
+                        <h3>Toast</h3>
+                        <p class="description">Fatia de pão de fermentação natural tostada na chapa com creme de ricota temperada e mix de ervas finas.</p>
+                        <span class="price">R$ 12,50</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://unsplash.com" alt="Sandwich" loading="lazy">
+                    <div class="product-info">
+                        <h3>Sandwich</h3>
+                        <p class="description">Sanduíche artesanal montado na baguete com fatias finas de peito de peru, queijo prato, rúcula fresca e maionese da casa.</p>
+                        <span class="price">R$ 16,00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Velvet Coffee. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

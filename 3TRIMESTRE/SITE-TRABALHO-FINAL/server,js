@@ -17,5 +17,8 @@ app.get('/sobre', (req, res) => {
 app.get('/contato', (req, res) => {
     res.sendFile('src/paginas/contato.html',{ root: dirBase })
 })
+app.get('/produtos', (req, res) => {
+    res.sendFile('src/paginas/produtos.html',{ root: dirBase })
+})
 // Liberar a porta do meu computador 
 app.listen(porta, () => { console.log('Servidor está vivo!') }) 
