@@ -1,0 +1,222 @@
+/* Reset de Estilos Básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fcfbfa;
+    color: #333333;
+}
+
+/* Barra de Navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5c1d33;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover, 
+.navbar nav ul li a.active {
+    color: #5c1d33;
+    border-bottom: 2px solid #5c1d33;
+    padding-bottom: 4px;
+}
+
+/* Seção Hero Superior */
+.hero-section {
+    background-color: #61213c; /* Fundo vinho idêntico à imagem */
+    color: #ffffff;
+    padding: 40px 8%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-text .subtitle {
+    color: #cbbba3; /* Tom bege do texto secundário */
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #cbbba3;
+}
+
+/* Container de Distribuição da Página */
+.contact-section {
+    padding: 60px 8%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 60px;
+}
+
+/* Coluna de Informações */
+.info-column {
+    flex: 1;
+}
+
+.info-column h2 {
+    color: #61213c;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.section-desc {
+    color: #666666;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.info-item {
+    margin-bottom: 25px;
+}
+
+.info-item strong {
+    display: block;
+    color: #333333;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.info-item p, .info-item a {
+    color: #555555;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    color: #61213c;
+    text-decoration: underline;
+}
+
+/* Coluna do Formulário */
+.form-column {
+    flex: 1.2;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #bfae8f; /* Detalhe bege superior */
+}
+
+.form-column h2 {
+    color: #61213c;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444444;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fafafa;
+    color: #333333;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #61213c;
+    background-color: #ffffff;
+}
+
+/* Botão de Envio (CTA) com Feedback */
+.btn-submit {
+    width: 100%;
+    background-color: #bfae8f; /* Tom bege/dourado do botão do print */
+    color: #3f1827;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #ad9c7d;
+}
+
+/* Estado de Feedback Visual do Carregamento */
+.btn-submit.loading {
+    background-color: #ad9c7d;
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+/* Esconder o campo Honeypot de bots */
+.honeypot-field {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Responsividade básica para telas menores */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .form-column {
+        padding: 25px;
+    }
+}

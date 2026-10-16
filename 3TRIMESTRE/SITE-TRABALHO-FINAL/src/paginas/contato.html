@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Coffee - Contato</title>
+  <link rel="stylesheet" href="../../estilos/contato.css">
+</head>
+<body>
+
+    <!-- Cabeçalho de Navegação -->
+    <header class="navbar">
+        <div class="logo">Velvet Coffee</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cardapio">Cardápio</a></li>
+                <li><a href="/sobre">Sobre Nós</a></li>
+                <li><a href="/contato" class="active">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner Hero Superior Reduzido -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <span class="subtitle">FALE CONOSCO</span>
+                    <h1>Entre em contato com a Velvet</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Principal de Contato -->
+        <section class="contact-section">
+            <div class="contact-container">
+                
+                <!-- Coluna 1: Informações Institucionais e Canais -->
+                <div class="info-column">
+                    <h2>Venha nos visitar</h2>
+                    <p class="section-desc">Reduzimos a fricção para você falar conosco ou encontrar nosso espaço físico.</p>
+                    
+                    <div class="info-item">
+                        <strong>📍 Endereço:</strong>
+                        <p>Rua Marlen, 158 Coffee Street</p>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>⏰ Horário de Funcionamento:</strong>
+                        <p>Segunda a sábado, das 8h às 20h</p>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>📸 Instagram:</strong>
+                        <p><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">@velvetcoffee</a></p>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>✉️ E-mail:</strong>
+                        <p><a href="mailto:hello@velvetcoffee.com">hello@velvetcoffee.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Formulário de Contato -->
+                <div class="form-column">
+                    <h2>Envie uma Mensagem</h2>
+                    <form action="#" method="POST" class="contact-form">
+                        
+                        <!-- Campo Anti-Spam (Honeypot) oculto do usuário real -->
+                        <div class="honeypot-field" aria-hidden="true">
+                            <label for="username_hp">Não preencha este campo se for humano:</label>
+                            <input type="text" id="username_hp" name="username_hp" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <!-- Campo Nome -->
+                        <div class="form-group">
+                            <label for="nome">Nome *</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                        </div>
+
+                        <!-- Campo E-mail com validação sintática nativa -->
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required placeholder="seu.email@dominio.com">
+                        </div>
+
+                        <!-- Campo Assunto com menu de seleção -->
+                        <div class="form-group">
+                            <label for="assunto">Assunto *</label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="" disabled selected>Selecione o motivo do contato</option>
+                                <option value="duvidas">Dúvidas</option>
+                                <option value="sugestoes">Sugestões</option>
+                                <option value="eventos">Eventos</option>
+                            </select>
+                        </div>
+
+                        <!-- Campo Mensagem expandida -->
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea id="mensagem" name="mensagem" rows="6" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                        </div>
+
+                        <!-- Botão de Envio com feedback visual -->
+                        <button type="submit" class="btn-submit" onclick="this.classList.add('loading'); this.innerText='Enviando...';">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
