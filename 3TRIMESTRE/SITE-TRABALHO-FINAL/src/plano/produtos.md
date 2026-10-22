@@ -1,7 +1,7 @@
 # Documento de Requisitos: Página de Cardápio (Produtos) — /produtos
 
 ## 1. Visão Geral da Página
-O cardápio digital da **Velvet Coffee** deve ser altamente escaneável, permitindo que o usuário navegue rapidamente pelas categorias de cafés, doces e lanches, com apelo visual focado no estímulo sensorial.
+O cardápio digital da **Velvet Coffee** deve ser altamente escaneável, permitindo que o usuário navegue rapidamente pelas categorias de cafés, doces e lanches, com apelo visual focado no estímulo .
 
 ## 2. Estrutura do Menu e Categorias
 A página será dividida estritamente nas seguintes seções:
